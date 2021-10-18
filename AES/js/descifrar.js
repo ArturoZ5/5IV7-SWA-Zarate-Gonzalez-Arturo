@@ -14,50 +14,41 @@ function abrirArchivo (evento){
     }
     
     else{
-        document.getElementById('Advertencia').innerText = "No se ha seleccionado ningún archivo"
+        document.getElementById('mensajes').innerText = "No ese ha seleccionado un archivo" 
     }
 }
 
-window.addEventListener('load', ()=>{
+window.addEventListener('load', () => {
     document.getElementById('archivo').addEventListener('change',abrirArchivo)
 })
 
-const descifrar = ()=>{
+const descifrar = () => {
     let llave = document.getElementById('llave').value
-    let tipocif = document.form.tipoDeAES.value
-
-    switch(tipocif){
+    let tipoDeAES = document.form.tipoDeAES.value
+    switch(tipoDeAES){
         case "128":
             if (llave.length <= 16){
                 llave = llave.padStart(16,'abc');
+            }else{
+                swal("La llave tiene que ser de 16 caracteres", "error");
             }
-            
-            else{
-                swal("Cuidado profe", "La llave tiene que ser menor a 16 caracteres", "error");
-            }
-        break
-
+                break
         case "192":
             if(llave.length <= 24){
                 llave = llave.padStart(24,'abc')
+            }else{
+                swal("La llave tiene que ser de 24 caracteres", "error");
             }
-            
-            else{
-                swal("Cuidado profe", "La llave tiene que ser menor a 24 caracteres", "error");
-            }
-        break
-
+            break
         case "256":
             if(llave.length <= 32){
                 llave = llave.padStart(32,'abc')
+            }else{
+                swal("La llave tiene que ser de 32 caracteres", "error");
             }
-            
-            else{
-                swal("Cuidado profe", "La llave tiene que ser menor a 32 caracteres", "error");
-            }
-        break
+            break
     }
     
-    document.getElementById("MensajeDescifrado").innerText = CryptoJS.AES.decrypt(contenido,llave).toString(CryptoJS.enc.Utf8);
+    document.getElementById('mensajeDescifrado').innerText = CryptoJS.AES.decrypt(contenido,llave).toString(CryptoJS.enc.Utf8);
     return false;
 }

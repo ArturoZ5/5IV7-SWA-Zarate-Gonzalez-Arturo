@@ -11,7 +11,7 @@ const cifrar = ()=>{
             }
             
             else{
-                swal("Cuidado profe", "La llave tiene que ser menor a 16 caracteres", "error");
+                swal("La llave tiene que ser de 16 caracteres", "error");
             }
         break
 
@@ -21,7 +21,7 @@ const cifrar = ()=>{
             }
             
             else{
-                swal("Cuidado profe", "La llave tiene que ser menor a 24 caracteres", "error");
+                swal("La llave tiene que ser de 24 caracteres", "error");
             }
         break
 
@@ -31,7 +31,7 @@ const cifrar = ()=>{
             }
             
             else{
-                swal("Cuidado profe", "La llave tiene que ser menor a 32 caracteres", "error");
+                swal("La llave tiene que ser de 32 caracteres", "error");
             }
         break
     }
