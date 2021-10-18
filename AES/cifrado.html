@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="css/aes.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;414;500&display=swap" rel="stylesheet">
+    <title>Página Cifrado</title>
+</head>
+
+<body>
+  
+  <center>
+        <form name="form">
+            <p>Eligue el tipo de cifrado AES</p>
+            <input type="radio" name="tipoAES" value="128"> 128
+            <br>
+            <input type="radio" name="tipoAES" value="192"> 192
+            <br>
+            <input type="radio" name="tipoAES" value="256"> 256
+            <br>
+            <input type="text" value="ingrese la llave" id="llave">
+            <input type="text" value="ingrese el mensaje" id="mensaje">
+            <button onclick="return cifrar()">cifrar</button>
+        </form>
+        <p id="cifrado"></p>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" > </script>
+        <script src="./js/cifrar.js"></script>
+    </div>
+     
+    <div>
+      <a class="nav-link" href="./index.html">Volver</a>
+    <div>
+    <div>
+      <a class="nav-link" href="./descifrado.html">Descifrado</a>
+    <div>
+  </center>
+  <section>
+    <img 	 src="imagen/zzz.gif"
+                style="padding-block: 10px; padding-left: 10px; height: 90%;" />
+  </section>
+</body>
+
+<footer>
+
+  <div>
+    <center>
+    <h3 class='texto' >Zárate González Arturo 5IV7</h3>
+  </center>
+  </div>
+
+</footer>
+
+</html> 
